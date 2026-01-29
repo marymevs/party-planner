@@ -13,7 +13,17 @@ async function getParties() {
   const responseBody = await response.json();
   const events = responseBody.data;
   parties = events;
-  console.log(events);
+}
+
+async function getParty(id) {
+  await getParties();
+  for (const party of parties) {
+    if (party.id === id) {
+      selectedParty = party;
+      continue;
+    }
+  }
+  render();
 }
 
 // === components ===
@@ -29,6 +39,11 @@ function PartyListItem(event) {
   $li.innerHTML = `
     <a href=#selected>${event.name}</a>
   `;
+
+  $li.addEventListener("click", () => {
+    getParty(event.id);
+  });
+
   return $li;
 }
 
