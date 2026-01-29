@@ -23,6 +23,7 @@ async function getParty(id) {
       continue;
     }
   }
+  console.log(selectedParty);
   render();
 }
 
@@ -47,6 +48,26 @@ function PartyListItem(event) {
   return $li;
 }
 
+function PartyDetails() {
+  if (!selectedParty) {
+    const $p = document.createElement("p");
+    $p.innerText = "select an event to see details";
+    return $p;
+  }
+
+  const $details = document.createElement("section");
+  $details.innerHTML = `
+    <p>${selectedParty.name} #${selectedParty.cohortId}</p>
+    <section>
+      <p>${selectedParty.date}</p>
+      <p>${selectedParty.location}</p>
+    </section>
+    <p>${selectedParty.description}</p>
+  `;
+
+  return $details;
+}
+
 // === render ===
 function render() {
   const $app = document.querySelector("#app");
@@ -57,11 +78,13 @@ function render() {
         <h2>Upcoming Parties</h2>
         <EventList></EventList>
         <h2>Party Details</h2>
+        <EventDetails></EventDetails>
       </section>
     </main>
   `;
 
   $app.querySelector("EventList").replaceWith(PartyList());
+  $app.querySelector("EventDetails").replaceWith(PartyDetails());
 }
 
 async function init() {
