@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+#app {
+  margin: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 10px;
+}
+
+.cards section {
+  width: 100%;
+}
+
+h1 {
+  padding: 20px 0px;
+}
+
+li {
+  list-style-type: none;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

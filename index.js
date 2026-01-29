@@ -74,11 +74,15 @@ function render() {
   $app.innerHTML = `
     <h1>Party Planners</h1>
     <main>
-      <section>
-        <h2>Upcoming Parties</h2>
-        <EventList></EventList>
-        <h2>Party Details</h2>
-        <EventDetails></EventDetails>
+      <section class="cards">
+        <section>
+          <h2>Upcoming Parties</h2>
+          <EventList></EventList>
+        </section>
+        <section>
+          <h2>Party Details</h2>
+          <EventDetails></EventDetails>
+        </section>
       </section>
     </main>
   `;
