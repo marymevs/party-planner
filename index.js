@@ -57,11 +57,14 @@ function PartyDetails() {
 
   const $details = document.createElement("section");
   $details.classList.add("event-details");
+
+  const date = selectedParty.date.split("T")[0];
+
   $details.innerHTML = `
-    <p>${selectedParty.name} #${selectedParty.cohortId}</p>
+    <h4>${selectedParty.name} #${selectedParty.cohortId}</h4>
     <section>
-      <p>${selectedParty.date}</p>
-      <p>${selectedParty.location}</p>
+      <p>${date}</p>
+      <p><i>${selectedParty.location}</i></p>
     </section>
     <p>${selectedParty.description}</p>
   `;
@@ -73,7 +76,7 @@ function PartyDetails() {
 function render() {
   const $app = document.querySelector("#app");
   $app.innerHTML = `
-    <h1>Party Planners</h1>
+    <h1>Party Planner</h1>
     <main>
       <section class="cards">
         <section>

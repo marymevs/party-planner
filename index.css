@@ -25,6 +25,7 @@
 
 h1 {
   padding: 20px 0px;
+  text-align: center;
 }
 
 h2 {
@@ -33,9 +34,9 @@ h2 {
 
 li {
   list-style-type: none;
-  border: 1px black solid;
+  border: 1px lightgray solid;
   border-radius: 5px;
-  padding: 3px 10px;
+  padding: 5px 10px;
 }
 
 a {
