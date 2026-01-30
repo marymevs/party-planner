@@ -23,6 +23,11 @@
   gap: 10px;
 }
 
+.selected {
+  font-weight: bold;
+  font-style: italic;
+}
+
 h1 {
   padding: 20px 0px;
   text-align: center;

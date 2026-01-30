@@ -23,7 +23,6 @@ async function getParty(id) {
       continue;
     }
   }
-  console.log(selectedParty);
   render();
 }
 
@@ -37,6 +36,11 @@ function PartyList() {
 
 function PartyListItem(event) {
   const $li = document.createElement("li");
+
+  if (event.id === selectedParty?.id) {
+    $li.classList.add("selected");
+  }
+
   $li.innerHTML = `
     <a href=#selected>${event.name}</a>
   `;
