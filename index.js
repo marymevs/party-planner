@@ -56,6 +56,7 @@ function PartyDetails() {
   }
 
   const $details = document.createElement("section");
+  $details.classList.add("event-details");
   $details.innerHTML = `
     <p>${selectedParty.name} #${selectedParty.cohortId}</p>
     <section>

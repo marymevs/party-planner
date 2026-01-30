@@ -10,15 +10,25 @@
 
 .cards {
   display: flex;
-  gap: 10px;
+  gap: 100px;
 }
 
 .cards section {
-  width: 100%;
+  width: 500px;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 h1 {
   padding: 20px 0px;
+}
+
+h2 {
+  padding: 10px 0px;
 }
 
 li {
